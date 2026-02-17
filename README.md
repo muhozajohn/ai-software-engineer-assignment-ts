@@ -62,6 +62,23 @@ Create `EXPLANATION.md` (max 250 words) containing:
 
 ### Running Tests Locally
 
+
+
+Clone the repository using HTTPS:
+
+```bash
+git clone https://github.com/muhozajohn/ai-software-engineer-assignment-ts.git
+cd ai-software-engineer-assignment-ts
+```
+
+Or clone using SSH:
+
+```bash
+git clone git@github.com:muhozajohn/ai-software-engineer-assignment-ts.git
+cd ai-software-engineer-assignment-ts
+```
+
+
 1. Install dependencies:
    ```bash
    npm install
@@ -71,6 +88,29 @@ Create `EXPLANATION.md` (max 250 words) containing:
    ```bash
    npm test
    ```
+
+Prerequisites & stricter checks
+
+- Ensure Node.js and npm are installed (a modern Node 18+ is recommended).
+- For reproducible installs in CI or clean environments, use:
+
+```bash
+npm ci
+```
+
+- To run a TypeScript strict type-check before running tests (no emit):
+
+```bash
+npx tsc --noEmit --strict
+```
+
+- Full flow (install, strict check, then tests):
+
+```bash
+npm install
+npx tsc --noEmit --strict
+npm test
+```
 
 ### Running Tests with Docker
 
